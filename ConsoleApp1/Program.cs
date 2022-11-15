@@ -2,19 +2,20 @@
 {
     public static void Main(string[] args)
     {
-        
-     (string name, int age, string type) Pet; 
+     (string Name, string Type, double Age, int NameCount) Pet;
 
      Console.Write("Напишите имя питомца: ");
-     Pet.name = Console.ReadLine();
+     Pet.Name = Console.ReadLine();
+     Pet.NameCount = Pet.Name.Length;
      Console.Write("Напишите возраст питомца (Цифрами): ");
-     Pet.age =Convert.ToInt32(Console.ReadLine());
-     Console.Write("Напишите кто ваш питомец(собака,кошка и тд.): ");
-     Pet.type = Console.ReadLine();
+     Pet.Age = double.Parse(Console.ReadLine());
+     Console.Write("Напишите вид вашего питомца: ");
+     Pet.Type = Console.ReadLine();
 
-     Console.WriteLine("Имя питомца {0}", Pet.name);
-     Console.WriteLine("Возраст питомца {0} ", Pet.age);
-     Console.WriteLine("Тип питомца {0}", Pet.type);
+     Console.WriteLine("Имя питомца {0}", Pet.Name);
+     Console.WriteLine("Возраст питомца {0} ", Pet.Age);
+     Console.WriteLine("Вид питомца {0}", Pet.Type);
+     Console.WriteLine("Сколько символов в имени питомца {0}", Pet.NameCount);
 
      Console.ReadKey();
     }
