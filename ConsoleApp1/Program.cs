@@ -1,39 +1,25 @@
-﻿string[] favcolors = new string[3];
-
-for (int i = 0; i < favcolors.Length; i++)
+﻿class MainClass
 {
-    Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
-    favcolors[i] = Console.ReadLine();
-}
-foreach (var color in favcolors)
-{
-    switch (color) 
+    public static void Main(string[] args)
     {
-        case "red":
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.Black;
+        
+     var (name,age,dog) =("Иван", 17, "Тёма");
 
-            Console.WriteLine("Your color is red!");
-            break;
+     Console.WriteLine("Моё имя {0}", name);
+     Console.WriteLine("Мой возраст {0} ", age);
+     Console.WriteLine("Моя собака {0}", dog);
 
-        case "green":
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Black;
+     Console.Write("Напишите ваше имя: ");
+     name = Console.ReadLine();
+     Console.Write("Напишите ваш возраст (Цифрами): ");
+     age =Convert.ToInt32(Console.ReadLine());
+     Console.Write("Напишите имя вашей собаки: ");
+     dog = Console.ReadLine();
 
-            Console.WriteLine("Your color is green!");
-            break;
+     Console.WriteLine("Ваше имя {0}", name);
+     Console.WriteLine("Ваш возраст {0} ", age);
+     Console.WriteLine("Ваша собака {0}", dog);
 
-        case "cyan":
-            Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Your color is cyan!");
-            break;
-        default:
-            Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Your color is yellow!");
-            break;
+     Console.ReadKey();
     }
-}
+}   
